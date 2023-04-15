@@ -71,6 +71,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         viewHolder.getTextView().setText(localDataSet[position]);
 
+
     }
     // Return the size of your dataset (invoked by the layout manager)
     @Override

@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity4 extends AppCompatActivity {
+    private static final String Extra_Name = "com.example.colorguessname.mainact4";
     LinearLayout linearLayout;
     RecyclerView recyclerView;
     Button playAgain;
@@ -26,6 +27,8 @@ public class MainActivity4 extends AppCompatActivity {
         textView3.setText("OOPS!, You choose the wrong order.\nThe correct order is displayed below.");
         Intent intent = getIntent();
         String randomArray[] = intent.getStringArrayExtra(MainActivity3.Extra_Name_MainAct3);
+//        /intent.putExtra(Extra_Name,randomArray);
+//        startActivity(intent);
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         CustomAdapter c = new CustomAdapter(randomArray);
