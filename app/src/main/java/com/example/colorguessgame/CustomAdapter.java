@@ -3,6 +3,7 @@ package com.example.colorguessgame;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,7 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.Objects;
+
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+    LinearLayout linearLayout;
+
+    public LinearLayout getLinearLayout() {
+        return linearLayout;
+    }
 
     private String[] localDataSet;
 
@@ -22,6 +30,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         private final TextView textView;
 
         public ViewHolder(View view) {
+
             super(view);
             // Define click listener for the ViewHolder's View
 
@@ -46,6 +55,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     // Create new views (invoked by the layout manager)
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.my_layout, viewGroup, false);
@@ -58,9 +68,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.getTextView().setText(localDataSet[position]);
-    }
 
+        viewHolder.getTextView().setText(localDataSet[position]);
+
+    }
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {

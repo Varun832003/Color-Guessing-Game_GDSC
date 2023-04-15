@@ -9,9 +9,11 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity4 extends AppCompatActivity {
+    LinearLayout linearLayout;
     RecyclerView recyclerView;
     Button playAgain;
     TextView textView3;
